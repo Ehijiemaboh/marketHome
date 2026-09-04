@@ -70,12 +70,12 @@ export default function App() {
       
       {/* --- HEADER --- */}
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-blue-900 font-bold text-xl">
+        <div className="max-w-6xl  mx-auto px-4 h-16 flex-col md:flex-row items-center justify-between">
+          <div className="flex justify-center items-center gap-2 text-blue-900 font-bold text-xl">
             <span className="p-2 bg-blue-50 text-blue-800 rounded-lg">🏪</span>
             Auto-Naija Mart
           </div>
-          <nav className="flex items-center gap-8 font-medium text-gray-600">
+          <nav className="flex items-center w-full justify-end gap-8 font-medium text-gray-600">
             <a href="#" className="text-blue-700 border-b-2 border-blue-700 pb-1">Home</a>
             <a href="#" className="hover:text-blue-700 flex items-center gap-1"><Search size={16}/> Search</a>
             <a href="#" className="hover:text-blue-700 flex items-center gap-1"><MessageSquare size={16}/> Chat</a>
@@ -115,7 +115,7 @@ export default function App() {
         {/* --- CATEGORIES SECTION --- */}
         <section className="mt-10">
           <h3 className="text-sm flex-start font-bold text-gray-900 tracking-wide">Select Category</h3>
-          <div className="pr-54 grid grid-cols-3 sm:grid-cols-6 gap-4 mt-4">
+          <div className="lg:pr-54 grid grid-cols-3 sm:grid-cols-6 gap-4 mt-4">
             {categories.map((cat) => (
               <div key={cat.id} className="flex flex-col items-center group cursor-pointer">
                 <div className="w-12 h-12 rounded-full bg-indigo-50/70 border border-transparent text-indigo-800 flex items-center justify-center transition-all group-hover:scale-105 group-hover:bg-indigo-100">
@@ -138,7 +138,7 @@ export default function App() {
             </a>
           </div>
 
-          <div className="pr-54 grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+          <div className="lg:pr-54 grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
             {products.map((product) => (
               <div key={product.id} className="bg-white border border-gray-100 rounded-xl p-3 shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
                 
